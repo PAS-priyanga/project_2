@@ -23,7 +23,7 @@ async function newAuthor(req, res) {
 }
 
 async function create(req, res) { 
-  const author = Author.create(req.body);
+  const author = await Author.create(req.body);
   // Assign the logged in user's id
  
   try {

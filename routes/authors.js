@@ -8,5 +8,6 @@ router.get('/authors/new', ensureLoggedIn, authorsCtrl.new);
 router.post('/authors', ensureLoggedIn, authorsCtrl.create);
 // POST /movies/:id/performers (associate a performer with a movie)
 router.post('/books/:id/authors', ensureLoggedIn, authorsCtrl.addToAuthor);
+// router.get('/authors/:id',ensureLoggedIn,authorsCtrl.show);
 
 module.exports = router;
