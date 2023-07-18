@@ -7,7 +7,11 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" href="/">Home</a>
+        <a href="/books" <%- title === 'All Books' ? 'class="active"' : '' %>>ALL BOOKS</a>
         <% if (user) { %>
+          <a href="/authors/new"	<%- title === 'Add author' ? 'class="active"' : '' %>>
+            ADD Author</a>
+            <a href="/books/new" <%- title === 'Add Book' ? 'class="active"' : '' %>>ADD BOOK</a>
           <a class="nav-link" href="/logout">Log Out</a>
           <% } else { %>
             <a class="nav-link" href="/auth/google">Log In</a>

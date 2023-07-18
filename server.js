@@ -15,7 +15,7 @@ require("./config/passport");
 
 const indexRouter = require('./routes/index');
 const booksRouter = require('./routes/books');
-const reviewsRouter = require('./routes/reviews');
+const reviewsRouter = require('./routes/reviews.js');
 const authorsRouter = require('./routes/authors');
 const usersRouter= require('./routes/users');
 
@@ -54,7 +54,7 @@ app.use('/', indexRouter);
 app.use('/books', booksRouter);
 app.use('/', reviewsRouter);
 app.use('/', authorsRouter);
-app.use('/', usersRouter);
+// app.use('/', usersRouter);
 
 
 // catch 404 and forward to error handler
