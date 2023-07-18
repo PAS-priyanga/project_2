@@ -14,6 +14,11 @@ require('./config/database');
 require("./config/passport");
 
 const indexRouter = require('./routes/index');
+const booksRouter = require('./routes/books');
+const reviewsRouter = require('./routes/reviews');
+const authorsRouter = require('./routes/authors');
+const usersRouter= require('./routes/users');
+
 
 var app = express();
 
@@ -46,6 +51,11 @@ app.use(function(req, res, next) {
 
 // ROUTES BEGIN HERE
 app.use('/', indexRouter);
+app.use('/books', booksRouter);
+app.use('/', reviewsRouter);
+app.use('/', authorsRouter);
+app.use('/', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
