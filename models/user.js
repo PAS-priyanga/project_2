@@ -8,7 +8,11 @@ const userSchema = new Schema({
     required: true
   },
   email: String,
-  avatar: String
+  avatar: String,
+  book:[{
+    type: Schema.Types.ObjectId,
+    ref: 'Book'
+  }]
 }, {
   timestamps: true
 });
