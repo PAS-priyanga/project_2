@@ -3,18 +3,22 @@ const Book = require('../models/book');
 
 
 module.exports = {
-    showBooksRead,
+    show,
   };
-  
-async function showBooksRead(req, res) {
+
+async function show(req, res) {
   const userId = req.params.user;
 
   try {
     // Find the user by ID
-    const user = await User.findById(userId).populate('booksRead');
+    console.log(req.user);
+    const user = await User.findById(userId).populate('req.user._id:');
+    console.log(user);
     const booksRead = user.booksRead;
 
-    res.render('books/read', { booksRead });
+
+    res.render('users/show', {booksRead });
+
   } catch (err) {
     console.log(err);
     res.redirect('/');

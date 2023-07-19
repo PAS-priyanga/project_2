@@ -9,7 +9,7 @@ const userSchema = new Schema({
   },
   email: String,
   avatar: String,
-  book:[{
+  booksRead:[{
     type: Schema.Types.ObjectId,
     ref: 'Book'
   }]

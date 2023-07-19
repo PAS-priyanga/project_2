@@ -5,7 +5,7 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // other routes
 
-router.get('/users/:userId/books/read', ensureLoggedIn,usersCtrl.showBooksRead);
+router.get('/users/show', ensureLoggedIn,usersCtrl.show);
 
 module.exports = router;
 
