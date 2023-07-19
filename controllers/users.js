@@ -12,7 +12,7 @@ async function show(req, res) {
   try {
     // Find the user by ID
     console.log(req.user);
-    const user = await User.findById(userId).populate('req.user._id:');
+    const user = await User.findById(req.user._id);
     console.log(user);
     const booksRead = user.booksRead;
 
