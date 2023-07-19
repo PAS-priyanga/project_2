@@ -11,6 +11,8 @@
         <% if (user) { %>
           <a href="/authors/new"	<%- title === 'Add author' ? 'class="active"' : '' %>>
             ADD Author</a>
+            <a href="/users/new"	<%- title === 'user details' ? 'class="active"' : '' %>>
+              ADD user</a>
             <a href="/books/new" <%- title === 'Add Book' ? 'class="active"' : '' %>>ADD BOOK</a>
           <a class="nav-link" href="/logout">Log Out</a>
           <% } else { %>

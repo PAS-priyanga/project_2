@@ -10,7 +10,10 @@ module.exports = {
 async function addToAuthor(req, res) {
   const book = await Book.findById(req.params.id);
   // The cast array holds the performer's ObjectId (referencing)
-  book.author.push(req.body.authorId);
+  book.author = req.body.authorId;
+  console.log(book);
+  console.log(req.body)
+  
   await book.save();
   res.redirect(`/books/${book._id}`);
 }

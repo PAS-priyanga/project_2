@@ -7,23 +7,20 @@
   <div><%= book.publishedYear %></div>
   <div>publisher: </div>
   <div><%= book.publisher %></div>
-  <div>author: </div>
-  <div><%= book.author %></div>
+
 
 
 
   <!-- start cast list -->
   <div>Author:</div>
   <ul>
-    <%- book.author.map(p => 
-      `<li>${p.name} <small>${p.email}</small></li>`
-    ).join('') %>
+    <%= book.author.name %>
   </ul>
   <!-- end cast list -->
 </section>
 <!-- add to cast form below this comment -->
 <form id="add-per-to-author" action="/books/<%= book._id %>/authors" method="POST">
-  <select name="athorId">
+  <select name="authorId">
     <!-- Emit an option for each performer -->
     <%- authors.map(p => 
       `<option value="${p._id}">${p.name}</option>`

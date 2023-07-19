@@ -54,7 +54,7 @@ app.use('/', indexRouter);
 app.use('/books', booksRouter);
 app.use('/', reviewsRouter);
 app.use('/', authorsRouter);
-// app.use('/', usersRouter);
+app.use('/', usersRouter);
 
 
 // catch 404 and forward to error handler

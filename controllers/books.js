@@ -1,4 +1,5 @@
 const Book = require('../models/book');
+const Author = require('../models/author');
 
 module.exports = {
   index,
@@ -13,8 +14,10 @@ async function index(req, res) {
   }
   
   async function show(req, res) {
-    const book = await Book.findById(req.params.id);
-    res.render('books/show', { title: 'Book Detail', book });
+    const book = await Book.findById(req.params.id).populate('author')
+    const authors = await Author.find({ _id: { $nin: book.author } }).sort('name');
+    console.log(authors);
+    res.render('books/show', { title: 'Book Detail', book, authors });
   }
   function newBook(req, res) {
     // We'll want to be able to render an  
