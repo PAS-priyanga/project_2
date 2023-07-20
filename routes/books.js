@@ -10,7 +10,8 @@ router.get('/', booksCtrl.index);
 router.get('/new', ensureLoggedIn, booksCtrl.new);
 // GET /movies/:id (show functionality) MUST be below new route
 router.get('/:id', booksCtrl.show);
-// POST /movies
+
+// // POST /movies
 router.post('/', ensureLoggedIn, booksCtrl.create);
-	
+// router.post('/books', ensureLoggedIn,usersCtrl.checkout);
 module.exports = router;

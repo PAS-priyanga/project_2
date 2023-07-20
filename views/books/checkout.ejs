@@ -1,21 +1,16 @@
 <%- include('../partials/header') %>
 
-<section id="show-page">
-  <div>Title: </div>
-  <div><%= book.title %></div>
-  <div>published Year: </div>
-  <div><%= book.publishedYear %></div>
-  <div>publisher: </div>
-  <div><%= book.publisher %></div>
+<% if (books) { %>
+
+  <% books.forEach(function(r) { %>
+      <tr>
+      <td><%= r.title %></td>
+      
+    </tr>
+  <% }); %>
 
 
 
+<% } %>
 
-  <!-- start cast list -->
-  <div>Author:</div>
-  <ul>
-    <%= book.author.name %>
-  </ul>
-  <!-- end cast list -->
-</section>  
 <%- include('../partials/footer') %>

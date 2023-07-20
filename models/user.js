@@ -10,6 +10,10 @@ const userSchema = new Schema({
   email: String,
   avatar: String,
   booksRead:[{
+    type: Schema.Types.Object,
+    ref: 'Book'
+  }],
+  booksReadId:[{
     type: Schema.Types.ObjectId,
     ref: 'Book'
   }]

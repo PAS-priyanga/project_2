@@ -14,7 +14,12 @@
   <!-- start cast list -->
   <div>Author:</div>
   <ul>
-    <%= book.author.name %>
+   
+
+    <% if (book.author) { %>
+      <%= book.author.name %>
+    <% } %>
+    
   </ul>
   <!-- end cast list -->
 </section>

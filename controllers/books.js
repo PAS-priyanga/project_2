@@ -28,11 +28,28 @@ async function index(req, res) {
 
 
   async function create(req, res) { 
+    console.log("inside create function");
+    console.log(req.body);
     const book = Book.create(req.body);
+  //  const inputauthor = new Author({
+  //   name:req.body.authorName,
+  //   email:req.body.authorEmail
+  // }
+  // );
+  //  const book = new Book
+  //  ({
+  //   title:req.body.title,
+  //   publisher:req.body.publisher,
+  //   publishedYear:req.body.publishedYear,
+  //   author:inputauthor
+  // }
+  // );
+    console.log("book"+book);
     // Assign the logged in user's id
     book.user = req.user._id;
     try {
-      await book.save();
+     
+        await book.save();
       // Probably want to go to newly added book's show view
       res.redirect(`/books/${book._id}`);
     } catch (err) {
@@ -41,4 +58,5 @@ async function index(req, res) {
       res.redirect(`/books/new`);
     }
   }
+  
   
