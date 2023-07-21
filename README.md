@@ -45,7 +45,8 @@ MongoDB
 Mongoose
 
 Getting Started
-click on the link to play the game
+click on the link to view the webpage
+https://priyanga-bookmanagement-b1c1dcbac196.herokuapp.com/
 
 Next Steps:
 As a user i would like to have functionality to  have status  for  books so that i can see the book in read, reading and what next  they  would like to  read.
