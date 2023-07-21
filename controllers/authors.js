@@ -32,7 +32,8 @@ async function create(req, res) {
   try {
     await author.save();
     // want to go to newly added book's show view
-    res.redirect(`/authors/${author._id}`);
+    res.redirect(`/authors/new`);
+    // res.redirect(`/authors/${author._id}`);
   } catch (err) {
     console.log(err);
     // want to go back to new

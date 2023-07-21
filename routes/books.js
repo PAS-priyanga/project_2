@@ -13,5 +13,5 @@ router.get('/:id', booksCtrl.show);
 
 // // POST /books
 router.post('/', ensureLoggedIn, booksCtrl.create);
-// router.post('/books', ensureLoggedIn,usersCtrl.checkout);
+
 module.exports = router;
