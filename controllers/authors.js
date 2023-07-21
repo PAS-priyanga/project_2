@@ -9,7 +9,7 @@ module.exports = {
 
 async function addToAuthor(req, res) {
   const book = await Book.findById(req.params.id);
-  // The cast array holds the performer's ObjectId (referencing)
+  
   book.author = req.body.authorId;
   console.log(book);
   console.log(req.body)
@@ -20,7 +20,7 @@ async function addToAuthor(req, res) {
 
 
 async function newAuthor(req, res) {
-  //Sort performers by their name
+
   const authors = await Author.find({}).sort('name');
   res.render('authors/new', { title: 'Add Author', authors });
 }
@@ -31,11 +31,11 @@ async function create(req, res) {
  
   try {
     await author.save();
-    // Probably want to go to newly added book's show view
+    // want to go to newly added book's show view
     res.redirect(`/authors/${author._id}`);
   } catch (err) {
     console.log(err);
-    // Probably want to go back to new
+    // want to go back to new
     res.redirect(`/authors/new`);
   }
 }

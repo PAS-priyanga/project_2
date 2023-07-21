@@ -49,7 +49,7 @@
     padding: 10px;
     border-radius: 5px;
   }
-  
+ 
   nav > a:hover:not(.active) {
     color: white;
     background-color: #424748;

@@ -9,26 +9,25 @@ module.exports = {
 };
 
 async function deleteReview(req, res) {
-    // Note the cool "dot" syntax to query on the property of a subdoc
+    
     const book = await Book.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
     // Rogue user!
     if (!book) return res.redirect('/books');
     // Remove the review using the remove method available on Mongoose arrays
     book.reviews.remove(req.params.id);
-    // Save the updated movie doc
+    
     await book.save();
-    // Redirect back to the movie's show view
+    // Redirect back 
     res.redirect(`/books/${book._id}`);
   }
   
 
   async function edit(req, res) {
-    // Note the cool "dot" syntax to query on the property of a subdoc
+
     const book = await Book.findOne({'reviews._id': req.params.id});
-    // Find the comment subdoc using the id method on Mongoose arrays
-    // https://mongoosejs.com/docs/subdocs.html
+    
     const review = book.reviews.id(req.params.id);
-    // Render the comments/edit.ejs template, passing to it the comment
+    
     res.render('reviews/edit', { review });
   }
 
@@ -36,7 +35,7 @@ async function deleteReview(req, res) {
 
   async function update(req, res) {
    
-    // Note the cool "dot" syntax to query on the property of a subdoc
+  
     const book = await Book.findOne({'reviews._id': req.params.id,'reviews.user': req.user._id});
    
    
@@ -69,7 +68,7 @@ async function deleteReview(req, res) {
     // We can push (or unshift) subdocs into Mongoose arrays
     book.reviews.push(req.body);
     try {
-      // Save any changes made to the movie doc
+      // Save any changes made to the book doc
       await book.save();
     } catch (err) {
       console.log(err);

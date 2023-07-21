@@ -2,16 +2,23 @@ Project Title : Books Management
 
 Project Description:
 
-The Books management  resolves around  an user and books. 
-On the webpage, anyone can view the list of  books available  for them to borrow and read. In addition to it they also have iformation on published year .
-The user also gets an option to view  the  details of the books and reviews written. 
-If the user wants to  add books or comment on the book or view if the book is available to borrowed- for these functionality the user needs to be loged in.
-we have used Google Oauth facility user to log in using their  gooogle acount.
- Once the user has logged in, the user lands on home page , where the user has  options to add books the list, add authors to the books and alsohas view of his page  containing the  books read by him  and account details.
- 
+The Books Management system revolves around users and books. On the webpage, anyone can view the list of books available for borrowing and reading. Additionally, they can access information about the publication year of each book.
+Users also have the option to view detailed information about books, including reviews written by others. However, to add books, comment on books, or check book availability for borrowing, users need to be logged in. We have implemented Google OAuth for user authentication, allowing users to log in using their Google accounts.
+Once a user logs in, they are directed to the home page. On the home page, the user has several options:
+Once a user logs in, they are directed to the home page. On the home page, the user has several options:
+
+1.Add Books to the List: Authenticated users can add new books to the system, providing book details such as title, author, and publication year.
+
+2.Add Authors to the Books: Authors can be associated with the books in the system.
+
+3.View Personal Page: Authenticated users have a dedicated page displaying the books they have read and their account details. The personal page may contain the following information:
+
+Books Read or reading by the user and account Details.
+
+
 
  ERD
- There is four relationship that exist book Management.
+ There is four relationship that exist in book Management.
 <img src="ERD.jpg"/>
 
 wireframe
@@ -19,6 +26,13 @@ wireframe
 <img src="author.jpg"/>
 <img src="index.jpg"/>
 <img src="user.jpg"/>
+
+website 
+<img src="home page.jpg"/>
+<img src="home page in.jpg"/>
+<img src="all books1.jpg"/>
+<img src="user profile.jpg"/>
+<img src="add author1.jpg"/>
 
 Trello link
 https://trello.com/b/c12oHFAz/project-2

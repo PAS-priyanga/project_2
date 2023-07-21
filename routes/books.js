@@ -4,14 +4,14 @@ const router = express.Router();
 const booksCtrl = require('../controllers/books');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 	
-// GET /movies
+// GET /books
 router.get('/', booksCtrl.index);
-// GET /movies/new
+// GET /books/new
 router.get('/new', ensureLoggedIn, booksCtrl.new);
-// GET /movies/:id (show functionality) MUST be below new route
+// GET /books/:id (show functionality) MUST be below new route
 router.get('/:id', booksCtrl.show);
 
-// // POST /movies
+// // POST /books
 router.post('/', ensureLoggedIn, booksCtrl.create);
 // router.post('/books', ensureLoggedIn,usersCtrl.checkout);
 module.exports = router;
