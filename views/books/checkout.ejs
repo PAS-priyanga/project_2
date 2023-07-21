@@ -1,16 +1,17 @@
 <%- include('../partials/header') %>
 
-<% if (books) { %>
+<h1>Books Checked Out</h1>
 
-  <% books.forEach(function(r) { %>
-      <tr>
-      <td><%= r.title %></td>
-      
-    </tr>
-  <% }); %>
-
-
-
-<% } %>
+<table>
+  <tbody>
+    <% if (books) { %>
+      <% books.forEach(function(book) { %>
+        <tr>
+          <td><%= book.title %></td>
+        </tr>
+      <% }); %>
+    <% } %>
+  </tbody>
+</table>
 
 <%- include('../partials/footer') %>

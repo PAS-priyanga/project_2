@@ -5,16 +5,12 @@
 
 
 <section id="user-page">
-  <div>Name: </div>
-  <div><%= user.name %></div>
-  <div>Email: </div>
-  <div><%= user.email %></div>
+  <div>Name: <%= user.name %></div>
+ 
+  <div>Email: <%= user.email %> </div>
 
-<form id="user-form" action="/users" method="POST">
-  <label>Name:</label>
-  <input type="text" name="name">
-  <label>email id:</label>
-  <input type="text" name="email">
+
+
 
   <table id="booksRead">
     <thead>

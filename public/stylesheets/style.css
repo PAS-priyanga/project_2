@@ -87,11 +87,12 @@
   table thead th {
     padding: 5px;
     border-bottom: 2px solid #424748;
+    align-self: right;
   }
   
   table td {
     padding: 10px;
-    text-align: center;
+    text-align: left;
   }
   
   #list td:nth-child(2), #list td:nth-child(3){

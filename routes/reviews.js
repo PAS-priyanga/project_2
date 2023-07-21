@@ -8,4 +8,6 @@ router.post('/books/:id/reviews', ensureLoggedIn, reviewsCtrl.create);
 // DELETE /reviews
 router.delete('/reviews/:id', ensureLoggedIn, reviewsCtrl.delete);
 
+router.get('/reviews/:id', ensureLoggedIn, reviewsCtrl.update);
+router.put('/reviews/:id', ensureLoggedIn, reviewsCtrl.update);
 module.exports = router;
