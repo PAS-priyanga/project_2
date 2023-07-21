@@ -32,8 +32,6 @@ async function deleteReview(req, res) {
     res.render('reviews/edit', { review });
   }
 
-
-
   async function update(req, res) {
    
     // Note the cool "dot" syntax to query on the property of a subdoc
